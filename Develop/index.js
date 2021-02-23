@@ -63,6 +63,20 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'installation',
+        message: 'Write a description on how to install your project. (Required)',
+        validate: installInput => {
+            if (installInput) {
+                return true;
+            }
+            else {
+                console.log('Please provide installation instructions.');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
         name: 'usage',
         message: 'Write instructions on how to use your project. (Required)',
         validate: usageInput => {
@@ -70,7 +84,7 @@ const questions = [
                 return true;
             }
             else {
-                console.log('Please write insructions for your project.');
+                console.log('Please write operating insructions for your project.');
                 return false;
             }
         }
@@ -79,7 +93,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Select a license.',
-        choices: ['GPLv3', 'Apache 2.0', 'MIT', 'Unlicense', 'None']
+        choices: ['GPL', 'Apache 2.0', 'MIT', 'Unlicense', 'None']
     },
     {
         type: 'confirm',
@@ -104,8 +118,22 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-
-}
+    return new Promise((resolve, reject) => {
+        fs.writeFile('./dest/README.md', data, err => {
+            // if there's an error, reject the Promise and send the error to the Promise's `.catch()` method
+            if (err) {
+                reject(err);
+                // return out of the function here to make sure the Promise doesn't accidentally execute the resolve() function as well
+                return;
+            }
+            // if everything went well, resolve the Promise and send the successful data to the `.then()` method
+            resolve({
+                ok: true,
+                message: 'File created!'
+            })
+        });
+    });
+};
 
 // TODO: Create a function to initialize app
 function init() {
@@ -113,4 +141,5 @@ function init() {
 }
 
 // Function call to initialize app
-init();
+init()
+    .then(writeToFile);

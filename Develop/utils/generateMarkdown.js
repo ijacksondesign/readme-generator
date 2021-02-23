@@ -132,8 +132,6 @@ function generateMarkdown(data) {
 
   ## Questions <a name="questions"></a>
   Please direct any questions to <https://github.com/${data.github}> or email me at <${data.email}>
-  
-  
 `;
 }
 

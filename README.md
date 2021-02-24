@@ -1,0 +1,40 @@
+# README Generator
+
+## Table of Contents
+* [Description](#description)
+* [Installation](#install)
+* [Usage](#usage)
+* [Questions](#questions)
+
+## Description <a name="description"></a>
+Create a professional README.md file by answering several questions in the command line
+
+<video width="320" height="240" controls>
+  <source src="./demo/readme-demo.mp4" type="video/mp4">
+</video>
+
+## Installation <a name="install"></a>
+After cloning the code, use npm install to install dependecies and then type node index into your terminal. Answer the prompted questions and a README.md file will be generated to the dest folder.
+
+## Usage <a name="usage"></a>
+MIT License
+
+Copyright (c) 2021 Ian Jackson
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

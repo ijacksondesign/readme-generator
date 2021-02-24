@@ -29,14 +29,14 @@ function renderLicenseSection(license) {
   }
   else if (license === "GPL") {
     return `
-    ${renderLicenseLink}
+    ${renderLicenseLink(license)}
 
     For more information on this license, visit [https://www.gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)
   `;
   }
   else if (license === "Apache 2.0") {
     return `
-    ${renderLicenseLink}
+    ${renderLicenseLink(license)}
     Copyright (c) ${new Date().getFullYear()}
 
     For more information on this license, visit [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
@@ -44,7 +44,7 @@ function renderLicenseSection(license) {
   }
   else if (license === "MIT") {
     return `
-      ${renderLicenseLink}
+      ${renderLicenseLink(license)}
       Copyright (c) ${new Date().getFullYear()}
 
       Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -68,7 +68,7 @@ function renderLicenseSection(license) {
   }
   else {
     return `
-      ${renderLicenseLink}
+      ${renderLicenseLink(license)}
       This is free and unencumbered software released into the public domain.
 
       Anyone is free to copy, modify, publish, use, compile, sell, or
@@ -101,6 +101,7 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `
   # ${data.title}
+  ${renderLicenseBadge(data.license)}
   
   ## Table of Contents
   * [Description](#description)
@@ -127,7 +128,7 @@ function generateMarkdown(data) {
   ## Contributors <a name="contributors"></a>
   ${data.installation}
 
-  ## Contributors <a name="test"></a>
+  ## Tests <a name="test"></a>
   ${data.test}
 
   ## Questions <a name="questions"></a>

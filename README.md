@@ -9,9 +9,7 @@
 ## Description <a name="description"></a>
 Create a professional README.md file by answering several questions in the command line
 
-<video width="320" height="240" controls>
-  <source src="./demo/readme-demo.mp4" type="video/mp4">
-</video>
+<img src="./demo/readme-demo.gif">
 
 ## Installation <a name="install"></a>
 After cloning the code, use npm install to install dependecies and then type node index into your terminal. Answer the prompted questions and a README.md file will be generated to the dest folder.

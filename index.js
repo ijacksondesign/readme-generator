@@ -96,10 +96,9 @@ const questions = [
         choices: ['GPL', 'Apache 2.0', 'MIT', 'Unlicense', 'None']
     },
     {
-        type: 'confirm',
+        type: 'input',
         name: 'contributors',
-        message: 'Do you have any contributors?',
-        default: false
+        message: 'Enter any contributors.',
     },
     {
         type: 'input',
@@ -129,7 +128,7 @@ function writeToFile(fileName, data) {
             // if everything went well, resolve the Promise and send the successful data to the `.then()` method
             resolve({
                 ok: true,
-                message: 'File created!'
+                message: 'Your README file has been generated!'
             })
         });
     });

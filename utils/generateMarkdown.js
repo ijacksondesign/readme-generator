@@ -5,7 +5,7 @@ function renderLicenseBadge(license) {
     return '';
   }
   return `
-    ![License](https://img.shields.io/static/v1?label=license&message=${license}&color=blue)
+    \r![License](https://img.shields.io/static/v1?label=license&message=${license}&color=blue?style=flat)
   `;
 };
 
@@ -16,7 +16,6 @@ function renderLicenseLink(license) {
     return '';
   }
   return `
-  ## License <a name="license"></a>
   ### ${license}
   `;
 }
@@ -29,22 +28,22 @@ function renderLicenseSection(license) {
   }
   else if (license === "GPL") {
     return `
-    ${renderLicenseLink(license)}
+    \r${renderLicenseLink(license)}
 
-    For more information on this license, visit [https://www.gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)
+    For more information on this license, visit \r[https://www.gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)
   `;
   }
   else if (license === "Apache 2.0") {
     return `
-    ${renderLicenseLink(license)}
+    \r${renderLicenseLink(license)}
     Copyright (c) ${new Date().getFullYear()}
 
-    For more information on this license, visit [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+    For more information on this license, visit \r[http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
   `;
   }
   else if (license === "MIT") {
     return `
-      ${renderLicenseLink(license)}
+      \r${renderLicenseLink(license)}
       Copyright (c) ${new Date().getFullYear()}
 
       Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -68,7 +67,7 @@ function renderLicenseSection(license) {
   }
   else {
     return `
-      ${renderLicenseLink(license)}
+      \r${renderLicenseLink(license)}
       This is free and unencumbered software released into the public domain.
 
       Anyone is free to copy, modify, publish, use, compile, sell, or
@@ -92,7 +91,7 @@ function renderLicenseSection(license) {
       ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
       OTHER DEALINGS IN THE SOFTWARE.
 
-      For more information, please refer to [https://unlicense.org](https://unlicense.org)
+      For more information, please refer to \r[https://unlicense.org](https://unlicense.org)
     `;
   }
 }
@@ -123,7 +122,7 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ## License <a name="license"></a>
-  ${data.license}
+  ${renderLicenseSection(data.license)}
 
   ## Contributors <a name="contributors"></a>
   ${data.installation}

@@ -1,7 +1,7 @@
 
-  # README Generator
+  # adfsdf
   
-    ![License](https://img.shields.io/static/v1?label=license&message=MIT&color=blue)
+    ![License](https://img.shields.io/static/v1?label=license&message=GPL&color=blue?style=for-the-badge)
   
   
   ## Table of Contents
@@ -21,16 +21,22 @@
   sdfsdfsd
 
   ## Usage <a name="usage"></a>
-  sfsdfsd
+  sdfsdf
 
   ## License <a name="license"></a>
-  MIT
+  
+    
+  ### GPL
+  
+
+    For more information on this license, visit [https://www.gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)
+  
 
   ## Contributors <a name="contributors"></a>
   sdfsdfsd
 
   ## Tests <a name="test"></a>
-  sdfsdfsd
+  sdfsdf
 
   ## Questions <a name="questions"></a>
-  Please direct any questions to <https://github.com/ijacksondesign> or email me at <ijacksondesign@gmail.om>
+  Please direct any questions to <https://github.com/ijacksondesign> or email me at <ijacksondesign@gmail.com>
